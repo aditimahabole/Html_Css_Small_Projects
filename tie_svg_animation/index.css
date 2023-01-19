@@ -1,0 +1,66 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(1, 40, 57);
+}
+.container
+{
+    position: relative;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aquamarine; */
+
+}
+.container .icon
+{
+    width: 100px;
+}
+.container .icon path
+{
+    fill: transparent;
+    stroke-width: 10;
+    stroke: #31e8ff;
+}
+
+.container .icon.tie path
+{
+   stroke-dasharray: 750;
+   stroke-dashoffset: 0;
+}
+
+.container .icon.tie path
+{
+   animation: animate-tie 3s linear forwards;
+}
+@keyframes animate-tie 
+{
+    0%
+    {
+        stroke-dashoffset: 0;
+    }
+    40%
+    {
+        stroke-dashoffset: 700;
+    }
+    80%
+    {
+        stroke-dashoffset: 1500;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dashoffset: 1500;
+        fill:#31e8ff ;
+    }
+}
